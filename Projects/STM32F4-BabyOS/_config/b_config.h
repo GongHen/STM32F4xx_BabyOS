@@ -1,0 +1,39 @@
+#ifndef __B_CONFIG_H__ 
+#define __B_CONFIG_H__ 
+
+
+#define HW_VERSION 211212
+#define FW_VERSION 80106
+#define FW_NAME "BabyOS"
+#define TICK_FRQ_HZ 1000
+#define VENDOR_ST 1
+#define STM32L41X_L46X 1
+#define _BOS_ALGO_ENABLE 1
+#define _ALGO_MD5_ENABLE 1
+#define _ALGO_CRC_ENABLE 1
+#define _ALGO_CRC32_ENABLE 1
+#define PCF8574_DEFAULT_OUTPUT 0
+#define MATRIX_KEYS_ROWS 4
+#define MATRIX_KEYS_COLUMNS 4
+#define ESP12F_UART_RX_BUF_LEN 1024
+#define RS485_RX_BUF_LEN 128
+#define _485_USE_CALLBACK 1
+#define _BOS_MODULES_ENABLE 1
+#define _PROTO_ENABLE 1
+#define PROTO_FID_SIZE 4
+#define PROTO_FLEN_SIZE 2
+#define _DEBUG_ENABLE 1
+#define LOG_LEVEL_INFO 0
+#define LOG_BUF_SIZE 256
+#define _LOG_VIA_UART 1
+#define LOG_UART 0
+#define _BOS_SERVICES_ENABLE 1
+#define _PROTOCOL_SERVICE_ENABLE 1
+#define LOG_LEVEL_CUSTOMIZE 1
+#define _B_LOG_ENABLE 1
+
+
+#include "b_type.h" 
+
+#endif 
+
