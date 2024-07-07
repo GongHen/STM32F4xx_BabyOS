@@ -1,1 +1,5 @@
 Projects/STM32F4-BabyOS/MDK-ARM/*
+Projects/STM32F407-BabyOS/MDK-ARM/*
+*.o
+*.crf
+*.d

@@ -77,68 +77,68 @@ extern "C" {
 
 #if ((defined(_DEBUG_ENABLE)) && (_DEBUG_ENABLE == 1))
 
-#if ((defined(LOG_LEVEL_CUSTOMIZE)) && (LOG_LEVEL_CUSTOMIZE == 1))
+	#if ((defined(LOG_LEVEL_CUSTOMIZE)) && (LOG_LEVEL_CUSTOMIZE == 1))
 
-#if ((defined(_B_LOG_ENABLE)) && (_B_LOG_ENABLE == 1))
-#define b_log(...) bLogOut(3, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#else
-#define b_log(...)
-#endif
+		#if ((defined(_B_LOG_ENABLE)) && (_B_LOG_ENABLE == 1))
+		#define b_log(...) bLogOut(3, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#else
+		#define b_log(...)
+		#endif
 
-#if ((defined(_B_LOG_I_ENABLE)) && (_B_LOG_I_ENABLE == 1))
-#define b_log_i(...) bLogOut(0, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#else
-#define b_log_i(...)
-#endif
+		#if ((defined(_B_LOG_I_ENABLE)) && (_B_LOG_I_ENABLE == 1))
+		#define b_log_i(...) bLogOut(0, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#else
+		#define b_log_i(...)
+		#endif
 
-#if ((defined(_B_LOG_W_ENABLE)) && (_B_LOG_W_ENABLE == 1))
-#define b_log_w(...) bLogOut(1, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#else
-#define b_log_w(...)
-#endif
+		#if ((defined(_B_LOG_W_ENABLE)) && (_B_LOG_W_ENABLE == 1))
+		#define b_log_w(...) bLogOut(1, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#else
+		#define b_log_w(...)
+		#endif
 
-#if ((defined(_B_LOG_E_ENABLE)) && (_B_LOG_E_ENABLE == 1))
-#define b_log_e(...) bLogOut(2, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#else
-#define b_log_e(...)
-#endif
+		#if ((defined(_B_LOG_E_ENABLE)) && (_B_LOG_E_ENABLE == 1))
+		#define b_log_e(...) bLogOut(2, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#else
+		#define b_log_e(...)
+		#endif
 
-#elif ((defined(LOG_LEVEL_ALL)) && (LOG_LEVEL_ALL == 1))
+	#elif ((defined(LOG_LEVEL_ALL)) && (LOG_LEVEL_ALL == 1))
 
-#define b_log_i(...) bLogOut(0, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#define b_log_w(...) bLogOut(1, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#define b_log_e(...) bLogOut(2, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#define b_log(...) bLogOut(3, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#define b_log_i(...) bLogOut(0, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#define b_log_w(...) bLogOut(1, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#define b_log_e(...) bLogOut(2, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#define b_log(...) bLogOut(3, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
 
-#elif ((defined(LOG_LEVEL_INFO)) && (LOG_LEVEL_INFO == 1))
+	#elif ((defined(LOG_LEVEL_INFO)) && (LOG_LEVEL_INFO == 1))
 
-#define b_log_i(...) bLogOut(0, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#define b_log_w(...) bLogOut(1, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#define b_log_e(...) bLogOut(2, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#define b_log(...)
+		#define b_log_i(...) bLogOut(0, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#define b_log_w(...) bLogOut(1, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#define b_log_e(...) bLogOut(2, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#define b_log(...)
 
-#elif ((defined(LOG_LEVEL_WARNING)) && (LOG_LEVEL_WARNING == 1))
+	#elif ((defined(LOG_LEVEL_WARNING)) && (LOG_LEVEL_WARNING == 1))
 
-#define b_log_i(...)
-#define b_log_w(...) bLogOut(1, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#define b_log_e(...) bLogOut(2, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#define b_log(...)
+		#define b_log_i(...)
+		#define b_log_w(...) bLogOut(1, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#define b_log_e(...) bLogOut(2, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#define b_log(...)
 
-#elif ((defined(LOG_LEVEL_ERROR)) && (LOG_LEVEL_ERROR == 1))
+	#elif ((defined(LOG_LEVEL_ERROR)) && (LOG_LEVEL_ERROR == 1))
 
-#define b_log_i(...)
-#define b_log_w(...)
-#define b_log_e(...) bLogOut(2, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
-#define b_log(...)
+		#define b_log_i(...)
+		#define b_log_w(...)
+		#define b_log_e(...) bLogOut(2, B_LOG_PARAM_DEFAULT, __VA_ARGS__)
+		#define b_log(...)
 
-#else
+	#else
 
-#define b_log_i(...)
-#define b_log_w(...)
-#define b_log_e(...)
-#define b_log(...)
+		#define b_log_i(...)
+		#define b_log_w(...)
+		#define b_log_e(...)
+		#define b_log(...)
 
-#endif
+	#endif
 
 #else
 

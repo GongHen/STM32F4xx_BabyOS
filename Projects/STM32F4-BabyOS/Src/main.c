@@ -18,6 +18,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "b_os.h"
 
 /** @addtogroup STM32F4xx_HAL_Examples
   * @{
@@ -73,6 +74,8 @@ int main(void)
 #if UART1_ENABLE
   MX_USART1_UART_Init();
 #endif
+	
+	bInit();
 
   /* Infinite loop */
   while (1)
@@ -102,8 +105,8 @@ int main(void)
   */
 static void SystemClock_Config(void)
 {
-  RCC_ClkInitTypeDef RCC_ClkInitStruct;
-  RCC_OscInitTypeDef RCC_OscInitStruct;
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /* Enable Power Control clock */
   __HAL_RCC_PWR_CLK_ENABLE();
