@@ -37,6 +37,7 @@
 #include <string.h>
 
 #include "hal/inc/b_hal.h"
+#include "main.h"
 
 #if ((defined(_DEBUG_ENABLE)) && (_DEBUG_ENABLE == 1))
 
@@ -161,13 +162,14 @@ B_FPUTC
 
 static void _bLogOutput(void *p)
 {
-#if defined(_LOG_VIA_USER_SPECIFIED) && (_LOG_VIA_USER_SPECIFIED == 1)
-    bLogOutputBytes(p, strlen(p));
-#elif defined(LOG_UART)
-    bHalUartSend((bHalUartNumber_t)LOG_UART, p, strlen(p));
-#else
-    (void)p;
-#endif
+//#if defined(_LOG_VIA_USER_SPECIFIED) && (_LOG_VIA_USER_SPECIFIED == 1)
+//    bLogOutputBytes(p, strlen(p));
+//#elif defined(LOG_UART)
+//    bHalUartSend((bHalUartNumber_t)LOG_UART, p, strlen(p));
+//#else
+//    (void)p;
+//#endif
+	HAL_UART_Transmit(&huart1, p, strlen(p), 0xFFFF);
 }
 
 /**

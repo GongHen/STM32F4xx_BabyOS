@@ -26,7 +26,7 @@
 #endif   
    
 /* Includes ------------------------------------------------------------------*/
-#include "stm32407_babyos.h"
+#include "stm32f407_babyos.h"
 /* Include IO component driver */
 #include "../Components/stmpe811/stmpe811.h"
    

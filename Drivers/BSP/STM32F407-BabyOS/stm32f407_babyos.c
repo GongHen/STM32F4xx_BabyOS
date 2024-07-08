@@ -26,8 +26,8 @@
 ------------------------------------------------------------------------------*/
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32407_babyos.h"
-#include "stm32407_babyos_io.h"
+#include "stm32f407_babyos.h"
+#include "stm32f407_babyos_io.h"
 
 /** @defgroup BSP BSP
   * @{
@@ -119,7 +119,7 @@ const uint16_t COM_RX_AF[COMn] = {EVAL_COM1_RX_AF};
 
 I2C_HandleTypeDef  heval_I2c;
 
-static uint8_t Is_LCD_IO_Initialized = 0;
+//static uint8_t Is_LCD_IO_Initialized = 0;
 
 /**
   * @}

@@ -18,8 +18,8 @@
   */
   
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32407_BABYOS_H
-#define __STM32407_BABYOS_H
+#ifndef __STM32F407_BABYOS_H
+#define __STM32F407_BABYOS_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -354,4 +354,4 @@ JOYState_TypeDef BSP_JOY_GetState(void);
 }
 #endif
 
-#endif /* __STM32407_BABYOS_H */
+#endif /* __STM32F407_BABYOS_H */
